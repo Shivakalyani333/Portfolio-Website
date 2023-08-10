@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgba(251, 246, 246, 0.8); 
+}
+ul {
+    list-style: none;
+}
+body {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-image: url('bac.jpg');
+    background-size: cover;
+}
+.sidebar {
+
+    position: fixed;
+    font-family: 'Poppins', sans-serif;
+    padding: 6px 14px;
+    width: 68px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(29, 20, 23, 0.5);
+    transition: 0.4s ease;
+}
+.sidebar.active {
+    width: 240px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+}
+.logo i {
+    cursor: pointer;
+    font-size: 28px;
+    margin-right: 5px;
+}
+.active .logoname {
+    font-size: 20px;
+    font-weight: 400;
+}
+.logoname {
+    display: none;
+}
+.active .logoname {
+    display: block;
+}
+.sidebar #btn {
+    position: absolute;
+    left: 90%;
+    top: 6px;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-60%);
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.sidebar #btn:hover {
+    background-color: rgba(29, 20, 23, 0.6);
+    border-radius: 50%;
+    font-size: 30px;
+}
+.sidebar ul {
+    margin-top: 20px;
+}
+.sidebar ul li {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 10vh 5px;
+}
+.sidebar ul li .tooltip {
+    background-color: rgba(32, 27, 28, 0.6);
+    position: absolute;
+    left: 80px;
+    top: 0;
+    transform: translateY(-50%);
+    border-radius: 6px;
+    height: 35px;
+    width: 122px;
+    line-height: 35px;
+    text-align: center;
+    /* transition: 0s; */
+    opacity: 0;
+    pointer-events: none;
+    
+}
+.sidebar ul li:hover .tooltip {
+    transition: all 0.5s ease;
+    opacity: 1;
+    top: 50%;
+}
+@media screen and (min-width:730px) {
+    .sidebar ul li:hover .tooltip{
+        opacity: 0;
+    }
+    
+}
+.nav-list li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.5s ease-out;
+    border-radius: 9px;
+}
+.nav-list li a:hover {
+    background-color: rgba(29, 20, 23, 0.6);
+
+}
+.nav-list li a i {
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+.links-name {
+    display: none;
+}
+.active .links-name {
+    display: inline;
+    pointer-events: auto;
+
+}
+@media only screen and (max-width:730px) {
+    .sidebar.active {
+        position: fixed;
+        font-family: 'Poppins', sans-serif;
+        padding: 6px 14px;
+        width: 68px;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: rgba(29, 20, 23, 0.5);
+        transition: 0.4s ease;
+    }
+    .active .links-name {
+        display: none;
+    }
+    .active .logoname {
+        display: none;
+    }
+    #btn {
+        display: none;
+        pointer-events: none;
+    }
+}
+.sid{
+    display:flex;
+    height:100%;
+}
+.home-content{
+    margin-left:250px;
+    transition: 0.4s ease;
+}
+.super{
+    margin-left: 75px;
+}
+@media only screen and (max-width:730px) {
+    .home-content{
+        margin-left:75px;
+    }
+    
+}
+.set{
+    display:grid;
+    grid-gap:1rem;
+    grid-template-columns:repeat(4,auto);
+}
+.set>div{
+    border-style: none;
+    border-radius: 1em;
+    background-color: rgba(36, 43, 41,0.7);
+    text-align: center;
+    padding: 0.2em 0.2em;
+}
+.info {
+    display: flex;
+    
+    height: 100%;
+    margin: 15px 15px ;
+}
+.info1{
+    padding: 5vh 5vw;
+}
+.btech{
+    background-color: rgba(36, 43, 41,0.7);
+    border-radius: 5px;
+    padding:10px 10px;
+    margin:10px;
+}
+.inter{
+    background-color: rgba(36, 43, 41,0.7);
+    border-radius: 5px;
+    padding:10px 10px;
+    margin:10px;
+}
+.tenth{
+    background-color: rgba(36, 43, 41,0.7);
+    border-radius: 5px;
+    padding:10px 10px;
+    margin:10px;
+}
+.intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#image{
+    height: 170px;
+    width: 140px;
+    border-radius: 50%;
+}
+.icons{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+.proj{
+    border: 2px solid black;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    padding: 20px 2px;
+}
+.intern{
+    border: 2px solid black;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    padding: 20px 2px;
+}
